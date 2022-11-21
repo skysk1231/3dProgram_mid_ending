@@ -49,7 +49,7 @@ float Scalesize = 1.0f;
 float pulsscale = 0.01f;
 float minusscale = -0.01f;
 
-bool scaleState = true;
+bool scaleState = false;
 
     mat3 ttranslate = mat3(
     1, 0, 0.001,
@@ -195,13 +195,13 @@ void Update()
 
         if (scaleState)
         {
-            transform.scale = transform.scale * tscale;
+            transform.scale = transform.scale * tdscale;
             Scalesize = Scalesize + minusscale;
            
         }
         else 
         {
-            transform.scale = transform.scale * tdscale;
+            transform.scale = transform.scale * tscale;
             Scalesize = Scalesize + pulsscale;
            
         }
